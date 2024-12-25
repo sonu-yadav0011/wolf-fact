@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wolf Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .fact-box {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            min-height: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Wolf Facts</h1>
+        <div id="fact" class="fact-box">Click the button to generate a fact!</div>
+        <button id="generateFactBtn">Generate Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "Wolves live in packs, which are complex social structures typically consisting of a family unit with a dominant breeding pair known as the alpha male and female.",
+            "Wolves communicate through a combination of vocalizations, body language, and scent marking. Their howls can be heard over long distances and are used to communicate with other pack members.",
+            "Wolves are carnivorous and primarily hunt large ungulates such as deer, elk, and moose. They are also known to eat smaller animals, carrion, and even fruits and vegetables when necessary.",
+            "Wolf packs have territories that can range from 50 to over 1,000 square miles, depending on the availability of prey and the density of wolf populations.",
+            "Wolves are highly adaptable animals and can live in a variety of habitats, including forests, tundras, deserts, and grasslands.",
+            "Wolves can run at speeds of up to 38 miles per hour (61 km/h) and have great endurance, allowing them to travel long distances in search of food.",
+            "Wolf pups are born blind and deaf and rely on their mother and other pack members for survival. They begin to see and hear at around two weeks old.",
+            "Within a pack, there is a clear hierarchy, with the alpha pair leading and making decisions for the group. Other members have roles that contribute to the pack's success.",
+            "In the wild, wolves typically live for 6 to 8 years, though some can live up to 13 years. In captivity, they can live up to 16 years.",
+            "Wolves have been hunted and persecuted throughout history, leading to their decline in many areas. Conservation efforts have helped some populations recover, but they remain endangered in certain regions.",
+            "There are several subspecies of wolves, including the gray wolf, Arctic wolf, and red wolf, each adapted to their specific environments.",
+            "Wolves play a crucial role in maintaining the health of ecosystems by controlling the populations of large herbivores, which can prevent overgrazing and promote biodiversity.",
+            "Wolves have been featured in various mythologies and cultures around the world, often symbolizing strength, freedom, and wilderness.",
+            "Wolves use scent marking to communicate with other wolves and to establish territory boundaries. They have scent glands on their paws and tails.",
+            "Wolves are highly intelligent animals with problem-solving abilities and complex social behaviors, which have been studied extensively by researchers."
+        ];
+
+        document.getElementById('generateFactBtn').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').textContent = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
