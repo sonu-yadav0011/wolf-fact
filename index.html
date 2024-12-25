@@ -6,8 +6,8 @@
     <title>Wolf Facts</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -17,36 +17,57 @@
 
         .container {
             text-align: center;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
         }
 
         h1 {
             color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
 
         .fact-box {
             margin: 20px 0;
-            padding: 15px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            min-height: 60px;
+            font-size: 1.1em;
+            color: #555;
+            transition: background-color 0.3s ease;
+        }
+
+        .fact-box:hover {
             background-color: #e0e0e0;
-            border-radius: 5px;
-            min-height: 50px;
         }
 
         button {
-            padding: 10px 20px;
+            padding: 12px 25px;
             background-color: #007bff;
-            color: #fff;
+            color: #ffffff;
             border: none;
-            border-radius: 5px;
+            border-radius: 25px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 1em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         button:hover {
             background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        button:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
         }
     </style>
 </head>
